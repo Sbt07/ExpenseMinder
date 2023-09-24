@@ -1,0 +1,119 @@
+/* Reset some default styles */
+body, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background image to the body */
+body {
+    background-image: url('bg1.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+/* Add your CSS styles here */
+
+/* Style for the heading with a solid background */
+.hb {
+    background-color: #f3f4f5; /* Background color */
+    color: #2a0eb6; /* Text color */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Make the background take the width of the text */
+}
+
+/* Style the header section */
+header {
+    text-decoration: solid white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Center the main content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Style the sections within main */
+.add-expense, .expense-list {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Style input fields and select boxes */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the "Add Expense" button */
+#add-expense-btn {
+    background-color: #7f67f4;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-expense-btn:hover {
+    background-color: #2a0eb6; /* Darker blue on hover */
+}
+
+/* Style the expense list */
+.expense-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expense-list li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Style the filter select box */
+#filter-category {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the header and section headings */
+h1, h2 {
+    text-align: center;
+}
+
+/* Center the buttons within the "actions" div */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Optional: Style for a background image within a section */
+.add-expense {
+    
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
