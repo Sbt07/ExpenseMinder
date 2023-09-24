@@ -4,37 +4,39 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="icon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>My Expense Tracker</title>
 </head>
 <body>
     <header>
-        <h1 class="hb">Bhupendra's Expense Tracker</h1>
+        <h1>Bhupendra's Expense Tracker</h1>
     </header>
     <main>
-        <section class="add-expense">
+        <section class="add-location">
+            <h2>Add Location</h2>
+            <input type="text" id="location-name" placeholder="Location">
+            <button id="add-location-btn">Add Location</button>
+        </section>
+        <section class="expense-form">
             <h2>Add Expense</h2>
-            <input type="text" id="expense-description" placeholder="Description">
+            <select id="location-select">
+                <!-- Location options will be added here dynamically using JavaScript -->
+            </select>
+            <input type="text" id="expense-description" placeholder="Date">
             <input type="number" id="expense-amount" placeholder="Amount">
             <select id="expense-category">
                 <option value="food">Food</option>
                 <option value="housing">Housing</option>
                 <option value="transportation">Transportation</option>
-                <option value="entertainment">Entertainment</option>
                 <option value="other">Other</option>
             </select>
             <button id="add-expense-btn">Add Expense</button>
         </section>
         <section class="expense-list">
             <h2>Expense List</h2>
-            <select id="filter-category">
-                <option value="all">All Categories</option>
-                <option value="food">Food</option>
-                <option value="housing">Housing</option>
-                <option value="transportation">Transportation</option>
-                <option value="entertainment">Entertainment</option>
-                <option value="other">Other</option>
-            </select>
             <ul id="expenses">
                 <!-- Expense items will be added here dynamically using JavaScript -->
             </ul>
