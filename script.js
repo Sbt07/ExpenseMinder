@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const expenses = [];
+    // Initialize expenses array with data from localStorage or an empty array
+    let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
 
     function updateExpenseList() {
         const expensesList = document.getElementById("expenses");
@@ -43,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
             descriptionInput.value = "";
             amountInput.value = "";
             updateExpenseList();
+            // Save expenses to localStorage
+            localStorage.setItem("expenses", JSON.stringify(expenses));
         }
     });
 
@@ -51,6 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const index = e.target.getAttribute("data-index");
             expenses.splice(index, 1);
             updateExpenseList();
+            // Save updated expenses to localStorage
+            localStorage.setItem("expenses", JSON.stringify(expenses));
         } else if (e.target.classList.contains("edit")) {
             const index = e.target.getAttribute("data-index");
             const expense = expenses[index];
@@ -58,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (newDescription !== null) {
                 expense.description = newDescription;
                 updateExpenseList();
+                // Save updated expenses to localStorage
+                localStorage.setItem("expenses", JSON.stringify(expenses));
             }
         }
     });
@@ -65,4 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("filter-category").addEventListener("change", function () {
         updateExpenseList();
     });
+
+    // Initial rendering of expense list
+    updateExpenseList();
 });
